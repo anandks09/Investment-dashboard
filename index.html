@@ -739,7 +739,7 @@ body::before {
 //  ⚙  CONFIG — edit your key and symbols here
 // ════════════════════════════════════════════════
 const API_KEY = "API_KEY43LPT6SUJETCEED4ZXIXMFSR1ADX43XE";   // ← paste your key
-const PROXY   = "https://corsproxy.io/?";
+const PROXY   = "";
 const BASE    = "https://api.finage.co.uk";
 
 const STOCKS  = ["AAPL","MSFT","TSLA","NVDA","GOOGL","AMZN","META","JPM"];
@@ -760,7 +760,7 @@ async function fetchCrypto(s) { return apiFetch(`${BASE}/last/crypto/${s}?apikey
 async function fetchForex(s)  { return apiFetch(`${BASE}/last/forex/${s}?apikey=${API_KEY}`); }
 
 async function apiFetch(url) {
-  const r = await fetch(px(url));
+  const r = const r = await fetch(url);
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   return r.json();
 }
