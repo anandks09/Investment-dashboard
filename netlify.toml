@@ -1,0 +1,6 @@
+[build]
+  publish = "."        # or "dist" / "public" if you have a build step
+  command = ""         # leave empty if no build step (plain HTML/JS)
+
+[functions]
+  directory = "netlify/functions"
