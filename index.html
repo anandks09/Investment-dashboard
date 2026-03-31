@@ -760,7 +760,7 @@ async function fetchCrypto(s) { return apiFetch(`${BASE}/last/crypto/${s}?apikey
 async function fetchForex(s)  { return apiFetch(`${BASE}/last/forex/${s}?apikey=${API_KEY}`); }
 
 async function apiFetch(url) {
-  const r = const r = await fetch(url);
+  const r = await fetch(url);
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   return r.json();
 }
